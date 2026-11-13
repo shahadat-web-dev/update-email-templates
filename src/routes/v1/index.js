@@ -4,6 +4,7 @@ const authRoute = require("./auth.routes");
 const userRoute = require("./user.routes");
 const docsRoute = require("./docs.routes");
 const customerRoute = require("./customer.routes");
+const renewalRoute = require("./renewal.routes");
 
 const router = express.Router();
 
@@ -18,10 +19,15 @@ const defaultRoutes = [
   },
 
   {
-  path: "/customers",
-  route: customerRoute,
-},
- 
+    path: "/customers",
+    route: customerRoute,
+  },
+  
+  {
+    path: "/renewals",
+    route: renewalRoute,
+  },
+
 ];
 
 const devRoutes = [
